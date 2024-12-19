@@ -1,5 +1,4 @@
 .idea/
 __pycache__/
 .env
-bot_image.jpg
-fraud_image.jpg
+images/
