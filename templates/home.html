@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Project Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            color: #343a40;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            max-width: 1000px;
+            flex-grow: 1;
+        }
+
+        .box {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-size: cover; /* Ensures the image covers the entire button */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents tiling */
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .box.fraud {
+            background-image: url('{{ url_for('static', filename='images/fraud_image.jpg') }}');
+        }
+
+        .box.bot {
+            background-image: url('{{ url_for('static', filename='images/bot_image.jpg') }}');
+        }
+
+        .box p {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 10px;
+            text-align: center;
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #343a40;
+            color: #fff;
+            font-size: 1rem;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Insurance Project</h1>
+    <p>Your one-stop solution for Insurance Fraud Detection and Chatbot Assistance.</p>
+    <div class="container">
+        <a href="/model" class="box fraud">
+            <p>Insurance Fraud Detection</p>
+        </a>
+
+        <a href="/bot" class="box bot">
+            <p>Insurify Chatbot</p>
+        </a>
+    </div>
+    <footer>
+        Made by Soham Dalal
+    </footer>
+</body>
+</html>

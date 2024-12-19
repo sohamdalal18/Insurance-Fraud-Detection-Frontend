@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection Model</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Insurance Fraud Detection</h1>
+        <form action="/prediction" method="POST">
+            <label for="months">Months of Subscription:</label>
+            <input type="text" id="months" name="months" required>
+
+            <label for="deductible">Amount Paid:</label>
+            <input type="text" id="deductible" name="deductible" required>
+
+            <label for="umbrella">Insurance Coverage:</label>
+            <input type="text" id="umbrella" name="umbrella" required>
+
+            <label for="gains">Monetary Gain:</label>
+            <input type="text" id="gains" name="gains" required>
+
+            <label for="loss">Monetary Loss:</label>
+            <input type="text" id="loss" name="loss" required>
+
+            <label for="hour">Hour of the Day:</label>
+            <input type="text" id="hour" name="hour" required>
+
+            <label for="vehicles">Number of Vehicles Involved:</label>
+            <input type="text" id="vehicles" name="vehicles" required>
+
+            <label for="injuries">Injuries:</label>
+            <input type="text" id="injuries" name="injuries" required>
+
+            <label for="witnesses">Number of Witnesses Present:</label>
+            <input type="text" id="witnesses" name="witnesses" required>
+
+            <label for="injury_claim">Injury Cost Claimed:</label>
+            <input type="text" id="injury_claim" name="injury_claim" required>
+
+            <label for="property_claim">Property Cost Claimed:</label>
+            <input type="text" id="property_claim" name="property_claim" required>
+
+            <label for="vehicle_claim">Vehicle Cost Claimed:</label>
+            <input type="text" id="vehicle_claim" name="vehicle_claim" required>
+
+            <button type="submit">Fraud Result</button>
+        </form>
+    </div>
+    <footer>
+        Made by Soham Dalal
+    </footer>
+</body>
+</html>

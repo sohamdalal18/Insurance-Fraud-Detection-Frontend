@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurify Chatbot</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Insurify! How may I help you?</h1>
+        <form action="/bot" method="POST">
+            <label for="query">Ask about insurance policies, claim processes, tax benefits, etc.:</label>
+            <input type="text" id="query" name="query" placeholder="Type your query here" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if response_text %}
+        <div class="response">
+            <h2>Chatbot Response:</h2>
+            <p>{{ response_text }}</p>
+        </div>
+        {% endif %}
+
+        <h2>Examples of questions you can ask:</h2>
+        <ul>
+            <li><button type="button" onclick="setExample('What are the tax benefits of life insurance in India?')">What are the tax benefits of life insurance in India?</button></li>
+            <li><button type="button" onclick="setExample('How does motor insurance coverage work?')">How does motor insurance coverage work?</button></li>
+            <li><button type="button" onclick="setExample('What are the steps to file a vehicle insurance claim?')">What are the steps to file a vehicle insurance claim?</button></li>
+            <li><button type="button" onclick="setExample('What is the difference between term insurance and ULIPs?')">What is the difference between term insurance and ULIPs?</button></li>
+            <li><button type="button" onclick="setExample('Which policies are best for senior citizens in India?')">Which policies are best for senior citizens in India?</button></li>
+        </ul>
+    </div>
+
+    <script>
+        function setExample(question) {
+            document.getElementById('query').value = question;
+        }
+    </script>
+    <footer>
+        Made by Soham Dalal
+    </footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection Result</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            color: #343a40;
+        }
+
+        .container {
+            flex-grow: 1; /* Ensures the container takes up available space */
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #495057;
+            margin-bottom: 20px;
+        }
+
+        .result p {
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #343a40;
+            color: #fff;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fraud Detection Result</h1>
+        <div class="result">
+            <p><strong>Prediction:</strong> {{ Prediction }}</p>
+        </div>
+        <a href="/model" class="btn">Try Another Prediction</a>
+        <a href="/" class="btn">Go to Home</a>
+    </div>
+    <footer>
+        Made by Soham Dalal
+    </footer>
+</body>
+</html>
