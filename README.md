@@ -1,1 +1,1 @@
-Webapp
+Insurance Fraud Detection Webapp
